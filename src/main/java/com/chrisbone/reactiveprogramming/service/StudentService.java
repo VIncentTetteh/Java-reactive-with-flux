@@ -14,7 +14,7 @@ public class StudentService {
     @Autowired
     private StudentDao dao;
 
-    //synchronise and blocking example using list
+    //Synchronise and blocking example using list
     public List<Student> students(){
         long startTime = System.currentTimeMillis();
         List<Student> student = dao.allStudents();
@@ -23,7 +23,7 @@ public class StudentService {
         return student;
     }
 
-    //asynchronise and non-blocking example using flux
+    //Asynchronise and non-blocking example using flux
     public Flux<Student> studentsStream(){
         long startTime = System.currentTimeMillis();
         Flux<Student> student = dao.allStudentsStream();
